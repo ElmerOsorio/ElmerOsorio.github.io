@@ -285,7 +285,7 @@ nav ul li{
     color: white;
 }
 
-/* Noticias derecha */
+/* Noticias laterales */
 .noti-img{
     width: 100%;
     height: auto;
@@ -293,9 +293,6 @@ nav ul li{
 }
 .noti-bar p{
     margin: 0;
-}
-.square-ad{
-    padding-top: 16px;
 }
 
 /* Segunda Seccion */

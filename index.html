@@ -30,8 +30,8 @@
     
     // Enabling the debug mode flag is useful during implementation,
     // but it's recommended you remove it for production
-    //mixpanel.init('6975c871bfef4a9fe29d90acd58744dd', {debug: true}); 
-    //mixpanel.track('Sign up');
+    mixpanel.init('6975c871bfef4a9fe29d90acd58744dd', {debug: true}); 
+    mixpanel.track('Sign up');
     </script>
         
     </head>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="user-btns" onclick="mixpanel.track('botones');">
                     <ul>
-                        <li><a  href="suscripcion.html" target="_blank"><span>Suscríbete</span></a>
+                        <li><a  href="suscripcion.html" target="_blank"><span onclick="mixpanel.track('subscripcion');">Suscríbete</span></a>
                             <span class="hide"><a  href="#" target="_blank"><img class="mobilehide"src="img/mail_outline.svg" alt=""></a></span>
                             <a  href="#" target="_blank"><img src="img/search.svg" alt=""></a>
                         </li>

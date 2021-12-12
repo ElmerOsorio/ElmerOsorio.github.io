@@ -125,6 +125,10 @@ nav ul li{
     padding: 0 20px;
     margin: 0;
     transition-duration: 500ms;
+    @media  (max-width: 500px) {
+        height: 66px;
+        
+    }
 }
 .nav-btn:hover{
     background: #4F5561;

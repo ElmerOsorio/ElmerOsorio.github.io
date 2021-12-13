@@ -43,7 +43,7 @@
                 </div>
                 <div class="user-btns" onclick="mixpanel.track('botones');">
                     <ul>
-                        <li><a  href="suscripcion.html" target="_blank"><span onclick="mixpanel.track('subscripcion');">Suscríbete</span></a>
+                        <li><a class="subs" href="suscripcion.html" target="_blank"><span  onclick="mixpanel.track('subscripcion');">Suscríbete</span></a>
                             <span class="hide"><a  href="#" target="_blank"><img class="mobilehide"src="img/mail_outline.svg" onclick="mixpanel.track('inbox');" alt=""></a></span>
                             <a  href="#" target="_blank"><img src="img/search.svg" onclick="mixpanel.track('busqueda');" alt="" ></a>
                         </li>
@@ -53,6 +53,7 @@
             <nav>
                 <ul>
                     <li>
+                            <a class="nav-btn" id="nav-active" href="" onclick="mixpanel.track('nav-finanzas');">Home</a>
                             <a class="nav-btn" href="" onclick="mixpanel.track('nav-finanzas');">Finanzas</a>
                             <a class="nav-btn" href="" onclick="mixpanel.track('nav-desarrollo-personal');">Desarollo Personal</a>
                             <a class="nav-btn" href="" onclick="mixpanel.track('nav-social');">Social</a>
@@ -67,17 +68,23 @@
             <div class="anuncio-ppal" onclick="mixpanel.track('sponsor-header');">
                 <a href="https://www.devf.la" target="blank"><img class="gif-ppal" src="img/devfad.gif" alt=""></a>
             </div>
-<!--Grid--> <div class="container">
+
+            
+<!-- Grid --> 
+
+            <div class="container">
 
                 <!--Primera Seccion-->
                 <!--Noticia destacada del día-->
                
                     <div class="destacado" onclick="mixpanel.track('destacado');">
                         <h2>Destacado del día</h2>
-                        <a href="story.html" target="blank"><div class="img-destacada">
+                        <a href="story.html">
+                            <div class="img-destacada">
                             <div class="categoria" ><button class="btn-noticia">Tecnología</button></div>
-                            <div class="titulo-nota"><h4>33 predicciones futuristas hechas en el pasado: erróneas, acertadas y disparatadas</h4></div>
-                        </div></a>
+                            <div class="titulo-nota"><h4 id="titulo-ppal">33 predicciones futuristas hechas en el pasado: erróneas, acertadas y disparatadas</h4></div>
+                            </div>
+                        </a>
                         <div>
                             <p>La tecnología avanza de una forma impresionante, lo que hoy es lo más avanzado e innovador en unos años se convierte en obsoleto,
                                 y ya no digamos en unos años...</p>
@@ -93,7 +100,7 @@
                 <!--Noticias Laterales-->
                 <div class="tendencias">
                     <div class="dropdown">
-                        <button class="dropbtn">Tendencias<img src="img/keyboard_arrow_down.svg" alt=""></button>
+                        <div class="btn-tendecias"><button class="dropbtn"><p>Tendencias</p></button><span class="arrow-dwn"><img src="img/keyboard_arrow_down.svg" alt=""></span></div>
                         <div class="dropdown-content" onclick="mixpanel.track('drop-down');">
                           <a href="#">Más leídos</a>
                           <a href="#">Novedades</a>
@@ -102,15 +109,15 @@
                     </div>
                     <div class="noti-bar" onclick="mixpanel.track('tendencias-economia');">
                         <img class="noti-img" src="img/gas-station.png" alt="">
-                        <h5>Economía</h5>
-                        <p>Fuerte impacto en los precios del combustible</p>
+                        <a href=""><h5>Economía</h5></a>
+                        <a href=""><p>Fuerte impacto en los precios del combustible</p></a>
                     </div>
                     <div class="noti-bar" onclick="mixpanel.track('tendencias-entretenimiento');">
                         <img class="noti-img" src="img/soccerballs.png" alt="">
                         <h5>Entretenimiento</h5>
-                        <p>Nike anuncia sus nuevos modelos de pelotas para La Liga</p>
+                        <a href=""><p>Nike anuncia sus nuevos modelos de pelotas para La Liga</p></a>
                     </div>
-                    <div onclick="mixpanel.track('sponsor-lateral');"><a href="suscripcion.html"><img src="img/adultad.gif" alt="Ad 50 de descuento"></a></div>
+                    <div class="adult-sponsor" onclick="mixpanel.track('sponsor-lateral');"><a href="suscripcion.html"><img class="adultad" src="img/adultad.gif" alt="Ad 50 de descuento"></a></div>
                 </div>
             
                 <!--Segunda Seccion-->
@@ -121,7 +128,7 @@
                         </div>
                         <div class="noti-horizontal">
                             <h5>Tecnología</h5>
-                            <h4>La nueva tendencia del e-commerce en redes sociales</h4>
+                            <a href=""><h4>La nueva tendencia del e-commerce en redes sociales</h4></a>
                             <p>El live shopping acapara el 13% del total de transacciones del comercio electrónico.</p>
                         </div>
                     </div>
@@ -130,14 +137,14 @@
                                 <a href=""><img src="img/ExpoDubai.png" alt=""></a>
                                 <div class="mini-info">
                                     <h5>Cultura</h5>
-                                    <p>La experiencia inmersiva Mystika representa a México.</p>
+                                    <a href=""><p>La experiencia inmersiva Mystika representa a México.</p></a>
                                 </div>
                             </div>                        
                             <div class="mini-card" id="minidos">
                                 <a href=""><img src="img/sillas.png" alt=""></a>
                                 <div class="mini-info">
                                     <h5>Cultura</h5>
-                                    <p>¿Ya tienes plan para ésta semana?</p>
+                                    <a href=""><p>¿Ya tienes plan para ésta semana?</p></a>
                                 </div>
                             </div>                        
                     </div>
@@ -150,7 +157,7 @@
                     <div class="desarrollo-personal" onclick="mixpanel.track('google-desarrollo-personal');">
                         <img class="noti-img" src="img/googleper.png" alt="">
                         <h5>Desarollo personal</h5>
-                        <h6>Cursos profesionales online gratis - Google Actívate</h6>
+                        <a href=""><h6>Cursos profesionales online gratis - Google Actívate</h6></a>
                         <p>Descubre un amplio contenido de formación gratuita para 
                             impulsar tu negocio o carrera profesional.</p>
                     </div>
@@ -159,7 +166,7 @@
                 <div class="entretenimiento" onclick="mixpanel.track('entreneimiento-terciaria');">
                     <div class="img-left"><img src="img/gamer.png"></div>
                     <h5>Entretenimiento</h5>
-                    <h6>La gran pregunta: ¿Qué visor de realidad virtual es el mejor?</h6>
+                    <a href=""><h6>La gran pregunta: ¿Qué visor de realidad virtual es el mejor?</h6></a>
                     <p>Los cascos de realidad virtual modernos ahora encajan en
                          una de dos categorías: conectados o independientes. 
                          Los auriculares conectados como HTC Vive Pro 2, PlayStation 
@@ -173,35 +180,35 @@
                         <img src="img/hand.png">
                         <div class="most-read-topic" >
                             <h5>Finanzas</h5> 
-                            <h6>La omnicanalidad será clave durante el Buen Fin</h6>
+                            <a href=""><h6>La omnicanalidad será clave durante el Buen Fin</h6></a>
                         </div>
                     </div>
                     <div class="most-read-card" onclick="mixpanel.track('mas-leidas-tecnologia');">
                         <img src="img/tecnomas.png">
                         <div class="most-read-topic">
                             <h5>Tecnología</h5> 
-                            <h6>¿Cómo elegir tu próximo smartphone?</h6>
+                            <a href=""><h6>¿Cómo elegir tu próximo smartphone?</h6></a>
                         </div>
                     </div>
                     <div class="most-read-card" onclick="mixpanel.track('mas-leidas-desarrollo-personal');">
                         <img src="img/desarrollomas.png">
                         <div class="most-read-topic">
                             <h5>Desarrollo Personal</h5> 
-                            <h6>Plan de desarrollo personal, su significado y como crear uno</h6>
+                            <a href=""><h6>Plan de desarrollo personal, su significado y como crear uno</h6></a>
                         </div>
                     </div>
                     <div class="most-read-card" onclick="mixpanel.track('mas-leidas-entretenimiento');">
                         <img src="img/hallomas.png">
                         <div class="most-read-topic">
                             <h5>Entretenimiento</h5> 
-                            <h6>Halloween: las mejores películas de terror del siglo</h6>
+                            <a href=""><h6>Halloween: las mejores películas de terror del siglo</h6></a>
                         </div>
                     </div>
                     <div class="most-read-card" onclick="mixpanel.track('mas-leidas-herramientas');">
                         <img src="img/herramas.png">
                         <div class="most-read-topic">
                             <h5>Herramientas</h5> 
-                            <h6>10 herramientas de internet para simplificar la vida</h6>
+                            <a href=""><h6>10 herramientas de internet para simplificar la vida</h6></a>
                         </div>
                     </div>
                 </div>
@@ -214,19 +221,19 @@
                     <div class="nota-carrousel" onclick="mixpanel.track('cultura-alfenique');"> 
                         <img src="img/nota_cultura1.png" alt="" >
                             <h5>Cultura</h5>
-                            <h4>Ganadores del concurso del alfeñique en Toluca</h4>
+                            <a href=""><h4>Ganadores del concurso del alfeñique en Toluca</h4></a>
                             <p>Concurso de los más importantes de la ciudad porque trata una tradición de casi 400 años.</p>
                     </div>
                     <div class="nota-carrousel" onclick="mixpanel.track('cultura-pancracio');">
                         <img src="img/nota_cultura2.png" alt="">
                         <h5>Cultura</h5>
-                        <h4>Surrealismo del pancracio mexicano</h4>
+                        <a href=""><h4>Surrealismo del pancracio mexicano</h4></a>
                         <p>En México, Salvador Dalí comentó que no soportaba la idea de estar en un país tan surrealista.</p>
                     </div>
                     <div class="nota-carrousel-der" onclick="mixpanel.track('cultura-tapices');">
                         <img src="img/nota_cultura3.png" alt="">
                         <h5>Cultura</h5>
-                        <h4>Se exhiben los tapices de Constantino Laura </h4>
+                        <a href=""><h4>Se exhiben los tapices de Constantino Laura </h4></a>
                         <p>La muestra que se compone de 16 piezas puede apreciarse hasta el 29 de octubre.</p>
                     </div>
                 </div>
@@ -237,19 +244,19 @@
                     <div class="nota-carrousel" onclick="mixpanel.track('finanzas-mexico');"> 
                         <img src="img/nota_finanzas1.png" alt="">
                         <h5>Finanzas</h5>
-                        <h4>La actividad económica de México crece 5% este mes</h4>
+                        <a href=""><h4>La actividad económica de México crece 5% este mes</h4></a>
                         <p>El Inegi espera una variación anual de 4% en las actividades secundarias y 6.1% en las terciarias.</p>
                     </div>
                     <div class="nota-carrousel" onclick="mixpanel.track('finznas-educacion-ahorro');">
                         <img src="img/nota_finanzas2.png" alt="">
                         <h5>Finanzas</h5>
-                        <h4>La educación financiera y el ahorro voluntario</h4>
+                        <a href=""><h4>La educación financiera y el ahorro voluntario</h4></a>
                         <p>Genera confianza entre las Afores para reforzar las metas planteadas en 2020.</p>
                     </div>
                     <div class="nota-carrousel-der" onclick="mixpanel.track('finanzas-afore');">
                         <img src="img/nota_finanzas3.png" alt="">
                         <h5>Finanzas</h5>
-                        <h4>Los retiros por desempleo en las Afore disminuyen</h4>
+                        <a href=""><h4>Los retiros por desempleo en las Afore disminuyen</h4></a>
                         <p>Los mexicanos retiraron 1,896.2 millones de pesos de sus Afore por desempleo.</p>
                     </div>
                 </div>

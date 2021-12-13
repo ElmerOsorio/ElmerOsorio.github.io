@@ -160,6 +160,9 @@ img{
     width: 100%;
     height: auto;
 }
+.icon-img{
+    width: 24px;
+}
 @media (max-width: 768px) {
     aside{
         display: none;

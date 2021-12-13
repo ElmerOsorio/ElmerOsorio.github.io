@@ -199,8 +199,9 @@ nav ul li{
 	-webkit-text-fill-color: transparent;
     margin-bottom: 16px;
 }
-#titulo-ppal{
-    color: white;
+.titulo-nota h4{
+    color: white;    
+    text-shadow: 0px 0px 16px rgba(28, 37, 56, 0.8);
 }
 .destacado:hover{
     border-image: linear-gradient(180deg, #353535, #353535, #353535) 1;
@@ -220,6 +221,9 @@ nav ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+#missuniverse{
+    background-image:url("kahanaafp.jpg");
 }
 .btn-noticia{
     background: linear-gradient(100deg, #4F6DB3 6%, #CA82E0 105%);

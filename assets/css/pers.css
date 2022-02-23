@@ -7,3 +7,26 @@
 #blog{
     display: none;
 }
+#about_tittle{
+    margin-top: 20px;
+}
+#projects_tittle{
+    margin-top: 20px;
+}
+.nk-isotope-item{
+    padding: 4px;
+}
+.gallery{
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+}
+.gallery-col{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.gallery-content{
+    width: 360px;
+    height: auto;
+}

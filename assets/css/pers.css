@@ -31,6 +31,12 @@
     width: 360px;
     height: auto;
 }
+.nk-nav-social{
+    display: none;
+}
+.nk-footer-social{
+    display: none;
+}
 @media (max-width: 768px){
     .gallery{
         flex-direction: column;

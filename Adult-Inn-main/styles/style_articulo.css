@@ -1,0 +1,143 @@
+/* Noticias carrousel*/
+.container-carrousel{
+    grid-column: 1 / 13;
+    background: white;
+    padding: 16px; 
+}
+
+.container-carrousel-finanzas{
+    background: #Ffffff;
+    padding: 16px;  
+}
+
+.title_carrousel{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: .5rem 0 2.7rem 0;
+    padding: 12px 0 12px 16px;
+    color: #4F5561;
+    border-width: 3px;
+    border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-image: linear-gradient(90deg, #CA82E0, #5CC4EA) 1;
+}
+
+.notas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.comentarios{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background: #F6F4F9;
+    margin: 25px;
+    padding: 16px;  
+}
+.nota-carrousel_comentarios{
+    background: white;
+    padding: 16px 30px;
+}
+
+.nota-carrousel_comentarios h6{
+    color: #C8C8C8;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    font-size: 0.8em;
+}
+
+.number_comments img{
+    width: auto;
+    height: 24px;
+}
+
+.comment_field{
+    background-color: white;
+    margin: 32px 50px 12px 50px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 0px 16px rgba(79, 109, 179, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment_field p {
+    color: #C8C8C8;
+    font-size: 0.8em;
+    margin: auto 16px;
+}
+
+.text_comments{
+    margin: -40px 16px 0 80px;
+}
+
+
+.nota-carrousel{
+    background-color: white;
+    margin-bottom: 16px;
+    padding: 16px;
+    margin-right: 16px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 0px 16px rgba(79, 109, 179, 0.2);
+}
+
+button{
+    width: 113px;
+    height: 30px;
+    background: #4F6DB3;
+    border-style: none;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1em;
+    color: white;  
+}
+
+.number_comments h4{
+    font-family: 'Poppins', sans-serif;
+    color:#5CC4EA;
+    margin: 0 8px;
+}
+
+.nota-carrousel-der{
+    background-color: white;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 0px 16px rgba(79, 109, 179, 0.2);
+}
+
+.notas img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.nota-carrousel_comentarios{ 
+    background-color: white;
+    margin: 0 50px 12px 50px;
+    padding: 16px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 0px 16px rgba(79, 109, 179, 0.2);
+}
+
+
+.avatar{
+    width: 46px;
+    height: 46px;
+    margin: 16px 0 0 16px;
+}
+
+.like{
+    width: 24px;
+    height: 24px;
+    margin: auto 10px;
+}
+
+/*section*/
+.story-section{
+    grid-auto-rows: max-content;
+}

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Siman.com | Ecommerce UX/UI</title>
+
+    <meta name="description" content="Elmer Osorio - Rediseño del flujo de compra de Siman.com.">
+    <meta name="keywords" content="portfolio, clean, minimal, Ux, Ui, portfolio website">
+    <meta name="author" content="ElmerOsorio">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- START: Styles -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="assets/css/combined.css">
+    <link rel="stylesheet" href="assets/css/pers.css">
+
+    <!-- START: Estilos propios de este case study (Siman) -->
+    <!-- Puedes mover estas reglas a pers.css cuando quieras, aquí quedan aisladas para no tocar el resto del sitio -->
+    <style>
+        .siman-section {
+            padding-top: 60px;
+            padding-bottom: 10px;
+            border-top: 1px solid #eee;
+        }
+        .siman-section:first-of-type {
+            border-top: none;
+        }
+        .siman-section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #1140c9;
+            margin-bottom: 6px;
+        }
+        .siman-flow-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .siman-flow-nav li a {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid #171717;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            color: #171717;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .siman-flow-nav li a:hover {
+            background-color: #171717;
+            color: #fff;
+            text-decoration: none;
+        }
+        .siman-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0 10px;
+        }
+        .siman-stat {
+            flex: 1 1 200px;
+            background-color: #f7f7f7;
+            padding: 24px 22px;
+            border-radius: 8px;
+        }
+        .siman-stat .num {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.1rem;
+            color: #1140c9;
+            line-height: 1;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .siman-stat .label {
+            font-size: 0.88rem;
+            color: #5f5f5f;
+            line-height: 1.4;
+        }
+        .siman-ba {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 30px 0;
+        }
+        .siman-ba-item {
+            flex: 1 1 280px;
+        }
+        .siman-ba-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .siman-ba-tag.before {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+        .siman-ba-tag.after {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .siman-placeholder-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border: 2px dashed #c9c9c9;
+            border-radius: 6px;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        .siman-changelist {
+            padding-left: 20px;
+        }
+        .siman-changelist li {
+            margin-bottom: 10px;
+        }
+        .siman-feature-card {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 26px 24px;
+            height: 100%;
+        }
+        .siman-feature-card h4 {
+            margin-bottom: 8px;
+        }
+        .siman-tools {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 0;
+        }
+        .siman-tools li {
+            background-color: #171717;
+            color: #fff;
+            font-size: 0.82rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+    </style>
+    <!-- END: Estilos propios -->
+
+    <!-- END: Styles -->
+
+</head>
+
+
+
+<body>
+
+
+
+
+    <header class="nk-header nk-header-opaque">
+        <!--
+        START: Navbar
+    -->
+        <nav class="nk-navbar nk-navbar-top">
+            <div class="container">
+                <div class="nk-nav-table">
+                    <a href="index.html" class="nk-nav-logo">
+                        <img src="assets/images/logo-light.svg" alt="" width="85" class="nk-nav-logo-onscroll">
+                        <img src="assets/images/logo.svg" alt="" width="85">
+                    </a>
+
+                    <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
+                        <li>
+                            <a href="index.html#about">About</a>
+                        </li>
+                        <li>
+                            <a href="index.html#projects">Portfolio</a>
+
+                        </li>
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a id="blog_link" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nk-nav nk-nav-right nk-nav-icons">
+                        <li class="single-icon hidden-lg-up">
+                            <a href="#" class="nk-navbar-full-toggle">
+                                <span class="nk-icon-burger">
+                                    <span class="nk-t-1"></span>
+                                    <span class="nk-t-2"></span>
+                                    <span class="nk-t-3"></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END: Navbar -->
+
+    </header>
+
+
+
+
+    <!--
+    START: Navbar Mobile
+-->
+    <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
+        <div class="nk-navbar-bg">
+            <div class="bg-image" style="background-image: url('assets/images/bg-menu.jpg')"></div>
+        </div>
+        <div class="nk-nav-table">
+            <div class="nk-nav-row">
+                <div class="container">
+                    <div class="nk-nav-header">
+
+                        <div class="nk-nav-logo">
+                            <a href="index.html" class="nk-nav-logo">
+                                <img src="assets/images/logo-light.svg" alt="" width="85">
+                            </a>
+                        </div>
+
+                        <div class="nk-nav-close nk-navbar-full-toggle">
+                            <span class="nk-icon-close"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-nav-row-full nk-nav-row">
+                <div class="nano">
+                    <div class="nano-content">
+                        <div class="nk-nav-table">
+                            <div class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content">
+                                <ul class="nk-nav">
+                                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-nav-row">
+                <div class="container">
+                    <div class="nk-nav-social">
+                        <ul>
+                            <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Navbar Mobile -->
+
+
+    <div class="nk-main">
+
+        <div class="container">
+            <div class="nk-portfolio-single">
+
+                <div class="nk-gap-4 mb-14"></div>
+                <h1 class="nk-portfolio-title display-4">Siman.com — Rediseño del Flujo de Compra</h1>
+
+                <div class="row vertical-gap">
+                    <div class="col-lg-12">
+                        <div class="nk-portfolio-info">
+                            <div class="nk-portfolio-text">
+                                <!-- EDITAR: ajusta el rol, tiempo del proyecto y equipo con el que trabajaste -->
+                                <p><strong>Rol:</strong> UX/UI Designer &nbsp;|&nbsp; <strong>Equipo:</strong> Product Owners, Desarrollo Front/Back, Analítica &nbsp;|&nbsp; <strong>Duración:</strong> [EDITAR: ej. 8 meses, 2023–2024]</p>
+                                <p>Siman.com es la plataforma de ecommerce de una de las cadenas de retail más grandes de Centroamérica. Trabajé de la mano de Product Owners y Desarrollo en el rediseño integral del flujo de compra —desde el Home hasta el Checkout— apoyado en investigación de comportamiento con Hotjar y Microsoft Clarity, y pruebas de usabilidad moderadas y no moderadas con Maze.</p>
+
+                                <ul class="siman-tools">
+                                    <li>Hotjar</li>
+                                    <li>Microsoft Clarity</li>
+                                    <li>Maze</li>
+                                    <li>Figma</li>
+                                    <li>Design System</li>
+                                    <li>A/B Testing</li>
+                                </ul>
+
+                                <div class="nk-gap-2"></div>
+
+                                <!-- Resumen de resultados generales - EDITAR con datos reales -->
+                                <h4>Resumen de impacto <span style="font-size:0.6em; color:#999; text-transform:none; font-weight:400;">(cifras ilustrativas — reemplázalas con tus datos reales)</span></h4>
+                                <div class="siman-stats">
+                                    <div class="siman-stat">
+                                        <!-- EDITAR -->
+                                        <span class="num">+24%</span>
+                                        <span class="label">Conversión general del flujo de compra</span>
+                                    </div>
+                                    <div class="siman-stat">
+                                        <!-- EDITAR -->
+                                        <span class="num">-38%</span>
+                                        <span class="label">Tiempo de carga del sitio</span>
+                                    </div>
+                                    <div class="siman-stat">
+                                        <!-- EDITAR -->
+                                        <span class="num">-22%</span>
+                                        <span class="label">Abandono en Checkout</span>
+                                    </div>
+                                    <div class="siman-stat">
+                                        <!-- EDITAR -->
+                                        <span class="num">80+</span>
+                                        <span class="label">Componentes documentados en el Design System</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nk-gap-3"></div>
+
+                <!-- Navegación rápida por parte del flujo -->
+                <ul class="siman-flow-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#landing-pages">Landing Pages</a></li>
+                    <li><a href="#plp">PLP</a></li>
+                    <li><a href="#pdp">PDP</a></li>
+                    <li><a href="#checkout">Checkout</a></li>
+                    <li><a href="#design-system">Design System</a></li>
+                    <li><a href="#ideacion">Ideación</a></li>
+                </ul>
+
+                <!-- ==================== HOME ==================== -->
+                <section class="siman-section" id="home">
+                    <span class="siman-section-label">01 · Home</span>
+                    <h2>Home</h2>
+                    <p>Rediseñamos el buscador para que dejara de ser un simple listado de resultados y se convirtiera en un asistente de descubrimiento: autocompletado de términos, categorías más buscadas, tarjetas de producto y banners comerciales dentro del mismo componente. También optimizamos el peso del sitio reduciéndolo a la mitad y creamos una nueva sección de categorías que mejoró notablemente la interacción de los usuarios. El header se rediseñó agregando wishlist, perfil de usuario y carrito con cantidades visibles.</p>
+
+                    <ul class="siman-changelist">
+                        <li><strong>Buscador inteligente:</strong> autocompletado de términos, categorías más buscadas, tarjetas de producto y banners comerciales en un mismo panel de resultados.</li>
+                        <li><strong>Optimización de peso:</strong> reducción del tamaño del sitio a la mitad (imágenes, scripts y componentes críticos priorizados).</li>
+                        <li><strong>Sección de categorías:</strong> nuevo bloque de navegación visual en el Home con impacto directo en la interacción.</li>
+                        <li><strong>Header renovado:</strong> wishlist, acceso a perfil de usuario y carrito de compras con contador de cantidades.</li>
+                    </ul>
+
+                    <div class="siman-stats">
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+18%</span>
+                            <span class="label">CTR en resultados de búsqueda</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-50%</span>
+                            <span class="label">Peso total del sitio</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+32%</span>
+                            <span class="label">Interacción con la sección de categorías</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+15%</span>
+                            <span class="label">Uso de wishlist desde el header</span>
+                        </div>
+                    </div>
+
+                    <div class="siman-ba">
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag before">Antes</span>
+                            <!-- EDITAR: reemplaza este div por <img src="assets/images/siman/home-antes.jpg" alt="Home antes" class="siman-placeholder-img" style="border:none;"> -->
+                            <div class="siman-placeholder-img">Imagen: Home — Antes<br>(reemplazar con captura real)</div>
+                        </div>
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag after">Después</span>
+                            <!-- EDITAR: reemplaza este div por <img src="assets/images/siman/home-despues.jpg" alt="Home después" class="siman-placeholder-img" style="border:none;"> -->
+                            <div class="siman-placeholder-img">Imagen: Home — Después<br>(reemplazar con captura real)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== LANDING PAGES ==================== -->
+                <section class="siman-section" id="landing-pages">
+                    <span class="siman-section-label">02 · Landing Pages</span>
+                    <h2>Landing Pages</h2>
+                    <p>Las landing pages dejaron de ser bloques de imágenes sueltas para convertirse en plantillas con navegación específica y ordenada que guía al usuario: navegación por categorías en la parte superior y bloques de secciones agrupadas por similitud de subcategorías, facilitando el escaneo y la llegada al producto correcto más rápido.</p>
+
+                    <ul class="siman-changelist">
+                        <li><strong>Plantillas estandarizadas:</strong> estructura reutilizable para nuevas campañas y temporadas, en lugar de piezas gráficas aisladas.</li>
+                        <li><strong>Navegación por categorías:</strong> acceso directo a las subcategorías relevantes desde la parte superior de la landing.</li>
+                        <li><strong>Agrupación por similitud:</strong> bloques de contenido organizados por afinidad de subcategoría, reduciendo la carga cognitiva.</li>
+                    </ul>
+
+                    <div class="siman-stats">
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+25%</span>
+                            <span class="label">CTR desde LP hacia PLP/PDP</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-20%</span>
+                            <span class="label">Tasa de rebote en landing pages</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+12%</span>
+                            <span class="label">Tiempo promedio en página</span>
+                        </div>
+                    </div>
+
+                    <div class="siman-ba">
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag before">Antes</span>
+                            <div class="siman-placeholder-img">Imagen: Landing Page — Antes<br>(reemplazar con captura real)</div>
+                        </div>
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag after">Después</span>
+                            <div class="siman-placeholder-img">Imagen: Landing Page — Después<br>(reemplazar con captura real)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== PLP ==================== -->
+                <section class="siman-section" id="plp">
+                    <span class="siman-section-label">03 · PLP</span>
+                    <h2>PLP (Listado de Productos)</h2>
+                    <p>Rediseñamos las tarjetas de producto y las facetas de filtrado, e incorporamos elementos SEO clave (título, descripción corta y descripción larga) para mejorar el posicionamiento orgánico de las categorías. También reemplazamos el scroll infinito por paginado, mejorando la predictibilidad de la navegación y el rendimiento de la página.</p>
+
+                    <ul class="siman-changelist">
+                        <li><strong>Tarjetas de producto rediseñadas:</strong> jerarquía visual más clara de precio, nombre y atributos clave.</li>
+                        <li><strong>Facetas de filtrado mejoradas:</strong> filtros más entendibles y rápidos de combinar.</li>
+                        <li><strong>Elementos SEO:</strong> título, descripción corta y descripción larga por categoría.</li>
+                        <li><strong>Paginado en lugar de scroll infinito:</strong> mejor control de navegación y carga de la página.</li>
+                    </ul>
+
+                    <div class="siman-stats">
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+15%</span>
+                            <span class="label">CTR en tarjetas de producto</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+19%</span>
+                            <span class="label">Tráfico orgánico a categorías (SEO)</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-14%</span>
+                            <span class="label">Tiempo de carga de la PLP</span>
+                        </div>
+                    </div>
+
+                    <div class="siman-ba">
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag before">Antes</span>
+                            <div class="siman-placeholder-img">Imagen: PLP — Antes<br>(reemplazar con captura real)</div>
+                        </div>
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag after">Después</span>
+                            <div class="siman-placeholder-img">Imagen: PLP — Después<br>(reemplazar con captura real)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== PDP ==================== -->
+                <section class="siman-section" id="pdp">
+                    <span class="siman-section-label">04 · PDP</span>
+                    <h2>PDP (Detalle de Producto)</h2>
+                    <p>La PDP tuvo los cambios más profundos del proyecto: reordenamiento completo de la información para soportar 3 tipos de precio (regular, oferta y Credisiman) junto con el cálculo de cuotas, mejora en la visibilidad del botón de agregar al carrito, una nueva sección para el programa de reemplazo <strong>Siman PRO</strong>, iconografía para características especiales del producto, y una sección nueva para elegir la dirección de envío desde la misma PDP —adelantando información de Checkout y mostrando el costo de envío antes de que el usuario agregue el producto al carrito.</p>
+
+                    <ul class="siman-changelist">
+                        <li><strong>Reordenamiento de precios:</strong> jerarquía clara entre precio regular, precio de oferta y precio Credisiman, con cálculo de cuotas visible.</li>
+                        <li><strong>Botón de agregar al carrito:</strong> mayor visibilidad y prioridad visual dentro del layout.</li>
+                        <li><strong>Sección Siman PRO:</strong> nuevo bloque para el programa de reemplazo de producto.</li>
+                        <li><strong>Iconografía de características:</strong> comunicación rápida de atributos especiales del producto.</li>
+                        <li><strong>Selección de dirección de envío desde PDP:</strong> adelanta información del Checkout y muestra el costo de envío de forma anticipada.</li>
+                    </ul>
+
+                    <div class="siman-stats">
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+22%</span>
+                            <span class="label">Add to cart</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-16%</span>
+                            <span class="label">Consultas de soporte sobre costos de envío</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+11%</span>
+                            <span class="label">Adopción de pago con Credisiman</span>
+                        </div>
+                    </div>
+
+                    <div class="siman-ba">
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag before">Antes</span>
+                            <div class="siman-placeholder-img">Imagen: PDP — Antes<br>(reemplazar con captura real)</div>
+                        </div>
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag after">Después</span>
+                            <div class="siman-placeholder-img">Imagen: PDP — Después<br>(reemplazar con captura real)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== CHECKOUT ==================== -->
+                <section class="siman-section" id="checkout">
+                    <span class="siman-section-label">05 · Checkout</span>
+                    <h2>Checkout</h2>
+                    <p>En Checkout eliminamos un cotizador extra al inicio del flujo (que calculaba el envío por separado) para dejar la sección de revisión de orden más limpia y directa —apoyado en que ese costo ya se muestra desde la PDP. En el inicio de sesión eliminamos campos innecesarios para reducir la fricción, y mejoramos la identificación del split de productos en los métodos de envío, dejando claro qué productos se envían a domicilio y cuáles se recogen en tienda dentro de un mismo pedido.</p>
+
+                    <ul class="siman-changelist">
+                        <li><strong>Eliminación del cotizador extra:</strong> el costo de envío ya se conoce desde la PDP, simplificando la revisión final de orden.</li>
+                        <li><strong>Inicio de sesión simplificado:</strong> menos campos, menos fricción para completar la compra.</li>
+                        <li><strong>Split de métodos de envío:</strong> identificación clara de qué productos van a domicilio y cuáles se recogen en tienda dentro de un mismo pedido.</li>
+                    </ul>
+
+                    <div class="siman-stats">
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">+27%</span>
+                            <span class="label">Conversión en Checkout</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-35%</span>
+                            <span class="label">Abandono en inicio de sesión</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-28%</span>
+                            <span class="label">Tickets de soporte por confusión en split de envío</span>
+                        </div>
+                    </div>
+
+                    <div class="siman-ba">
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag before">Antes</span>
+                            <div class="siman-placeholder-img">Imagen: Checkout — Antes<br>(reemplazar con captura real)</div>
+                        </div>
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag after">Después</span>
+                            <div class="siman-placeholder-img">Imagen: Checkout — Después<br>(reemplazar con captura real)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== DESIGN SYSTEM ==================== -->
+                <section class="siman-section" id="design-system">
+                    <span class="siman-section-label">06 · Design System</span>
+                    <h2>Design System</h2>
+                    <!-- EDITAR: agrega detalle real (nombre del design system, herramienta, cobertura) -->
+                    <p>[EDITAR: describe aquí el Design System — nombre, herramienta usada (ej. Figma), tokens de color/tipografía, componentes documentados, y cómo se adoptó entre los equipos de diseño y desarrollo para acelerar el handoff.]</p>
+
+                    <div class="siman-stats">
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">80+</span>
+                            <span class="label">Componentes documentados</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">5</span>
+                            <span class="label">Squads usando el Design System</span>
+                        </div>
+                        <div class="siman-stat">
+                            <!-- EDITAR -->
+                            <span class="num">-30%</span>
+                            <span class="label">Tiempo de handoff diseño → desarrollo</span>
+                        </div>
+                    </div>
+
+                    <div class="siman-ba">
+                        <div class="siman-ba-item">
+                            <span class="siman-ba-tag after">Design System</span>
+                            <div class="siman-placeholder-img">Imagen: Librería de componentes en Figma<br>(reemplazar con captura real)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== IDEACIÓN DE FEATURES ==================== -->
+                <section class="siman-section" id="ideacion">
+                    <span class="siman-section-label">07 · Ideación</span>
+                    <h2>Ideación de nuevos features</h2>
+                    <p>[EDITAR: reemplaza estas 4 ideas de ejemplo con los features reales que propusiste, y ajusta la justificación de cada una.]</p>
+
+                    <div class="row vertical-gap">
+                        <div class="col-lg-6">
+                            <div class="siman-feature-card">
+                                <h4>[EDITAR: Nombre del feature 1]</h4>
+                                <p>[EDITAR: breve justificación — qué problema resuelve y por qué se priorizó.]</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="siman-feature-card">
+                                <h4>[EDITAR: Nombre del feature 2]</h4>
+                                <p>[EDITAR: breve justificación.]</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="siman-feature-card">
+                                <h4>[EDITAR: Nombre del feature 3]</h4>
+                                <p>[EDITAR: breve justificación.]</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="siman-feature-card">
+                                <h4>[EDITAR: Nombre del feature 4]</h4>
+                                <p>[EDITAR: breve justificación.]</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="nk-gap-4 mt-14">
+                    <h2>Galería</h2>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Galería final - reemplaza estas imágenes con capturas reales del sitio final -->
+        <div class="gallery">
+            <!-- EDITAR: reemplaza por <img src="assets/images/siman/gallery-1.png" alt="" class="full-img"> -->
+            <div class="siman-placeholder-img" style="max-width:1140px; width:100%; aspect-ratio:16/9;">Imagen: Vista general del flujo rediseñado<br>(reemplazar con captura real)</div>
+        </div>
+
+        <!-- START: Pagination -->
+        <div class="nk-pagination nk-pagination-center">
+            <div class="container">
+                <!-- EDITAR: confirma que estos enlaces apunten a los proyectos correctos en tu portafolio -->
+                <a class="nk-pagination-prev" href="adultinn.html">
+                    <span class="pe-7s-angle-left"></span> Previous Work</a>
+                <a class="nk-pagination-center" href="index.html#projects">
+                    <span class="nk-icon-squares"></span>
+                </a>
+                <a class="nk-pagination-next" href="levelup.html">Next Work <span class="pe-7s-angle-right"></span> </a>
+            </div>
+        </div>
+        <!-- END: Pagination -->
+
+
+
+        <!--
+    START: Footer
+-->
+        <footer class="nk-footer">
+
+
+            <div class="nk-footer-cont">
+                <div class="container text-xs-center">
+                    <div class="nk-footer-social">
+                        <ul>
+                            <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nk-footer-text">
+                        <p>2021 &copy; Elmer Osorio</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END: Footer -->
+
+
+    </div>
+
+
+
+
+    <!-- START: Scripts -->
+
+    <script src="assets/js/combined.js"></script>
+
+    <!-- END: Scripts -->
+
+
+</body>
+
+</html>

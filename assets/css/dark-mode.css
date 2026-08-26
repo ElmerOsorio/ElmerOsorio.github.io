@@ -1,0 +1,30 @@
+/* ========================================================================== 
+   DARK MODE
+   The manual theme stored in localStorage overrides the system preference.
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #111210;
+    --color-surface: #181916;
+    --color-surface-alt: #242520;
+    --color-text: #f3f2ed;
+    --color-text-muted: #aaa9a1;
+    --color-line: rgba(255, 255, 255, 0.16);
+    --color-accent: #87a2ff;
+    --color-accent-contrast: #101010;
+    --color-focus: #9ab0ff;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #111210;
+  --color-surface: #181916;
+  --color-surface-alt: #242520;
+  --color-text: #f3f2ed;
+  --color-text-muted: #aaa9a1;
+  --color-line: rgba(255, 255, 255, 0.16);
+  --color-accent: #87a2ff;
+  --color-accent-contrast: #101010;
+  --color-focus: #9ab0ff;
+}

@@ -1,0 +1,35 @@
+/* ========================================================================== 
+   ANIMATION STATES
+   JavaScript only adds/removes state classes; presentation remains here.
+   ========================================================================== */
+html.js [data-reveal] {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 2rem, 0);
+  transition: opacity 800ms var(--ease-out), filter 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+html.js [data-reveal="scale"] { transform: scale(0.94); }
+html.js [data-reveal="left"] { transform: translate3d(-2rem, 0, 0); }
+html.js [data-reveal].is-visible { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1); }
+
+.reveal-mask { overflow: hidden; }
+.reveal-mask > * { will-change: transform; }
+
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: var(--color-text);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+
+.hero-title .word { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.hero-title .word-inner { display: inline-block; }
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.35; transform: scaleY(0.75); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+.hero-scroll::after { animation: scrollPulse 2s var(--ease-in-out) infinite; }

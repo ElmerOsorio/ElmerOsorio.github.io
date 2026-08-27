@@ -3,10 +3,7 @@
   "configurations": [
     {
       "name": "portfolio-static",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["/Users/elmerosorio/Documents/GitHub/ElmerOsorio.github.io/.claude/serve.py"],
-      "port": 8080,
-      "autoPort": true
+      "url": "http://localhost:8080"
     }
   ]
 }

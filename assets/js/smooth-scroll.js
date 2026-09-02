@@ -27,7 +27,12 @@ export function initSmoothScroll() {
       const target = document.querySelector(link.getAttribute('href'));
       if (!target) return;
       event.preventDefault();
-      lenis.scrollTo(target, { offset: -72, duration: 1.1 });
+      document.dispatchEvent(new CustomEvent('smooth-scroll:navigate-start'));
+      lenis.scrollTo(target, {
+        offset: -72,
+        duration: 1.1,
+        onComplete: () => document.dispatchEvent(new CustomEvent('smooth-scroll:navigate-end')),
+      });
     });
   });
 

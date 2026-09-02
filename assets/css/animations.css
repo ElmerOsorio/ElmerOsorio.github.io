@@ -25,7 +25,7 @@ html.js [data-reveal].is-visible { opacity: 1; filter: blur(0); transform: trans
   pointer-events: none;
 }
 
-.hero-title .word { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.hero-title .word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-right: 0.15em; margin-right: -0.15em; }
 .hero-title .word-inner { display: inline-block; }
 
 @keyframes scrollPulse {

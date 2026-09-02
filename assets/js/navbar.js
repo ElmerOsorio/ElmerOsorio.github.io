@@ -6,14 +6,28 @@ export function initNavbar() {
   if (!header) return;
 
   let lastY = window.scrollY;
+  let suppressHide = false;
   const updateHeader = rafThrottle(() => {
     const currentY = window.scrollY;
     header.classList.toggle('is-scrolled', currentY > 24);
-    header.classList.toggle('is-hidden', currentY > lastY && currentY > 180);
+    if (!suppressHide) {
+      header.classList.toggle('is-hidden', currentY > lastY && currentY > 180);
+    }
     lastY = currentY;
   });
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
+
+  // A nav-link click triggers an animated scroll (smooth-scroll.js); ignore
+  // that programmatic motion so the header doesn't flicker mid-jump.
+  document.addEventListener('smooth-scroll:navigate-start', () => {
+    suppressHide = true;
+    header.classList.remove('is-hidden');
+  });
+  document.addEventListener('smooth-scroll:navigate-end', () => {
+    suppressHide = false;
+    lastY = window.scrollY;
+  });
 
   const links = qsa('[data-section-link]');
   const sections = links.map((link) => qs(link.getAttribute('href'))).filter(Boolean);

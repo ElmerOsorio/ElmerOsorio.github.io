@@ -45,5 +45,5 @@ La base usa CDN para GSAP, ScrollTrigger, Lenis y SplitType. Para producción es
 
 - `prefers-reduced-motion` desactiva smooth scroll, parallax y animaciones complejas.
 - El cursor solo se activa con mouse/trackpad.
-- La navegación móvil mantiene control de teclado y Escape.
+- En móvil, la navegación es un submenú de píldoras siempre visible (sin overlay ni tecla Escape que gestionar).
 - Los placeholders deben recibir `alt` descriptivos al ser sustituidos.

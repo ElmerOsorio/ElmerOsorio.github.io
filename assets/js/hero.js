@@ -22,7 +22,7 @@ export function initHero() {
   if (window.gsap) {
     const timeline = window.gsap.timeline({ defaults: { ease: 'power4.out' } });
     timeline
-      .from('[data-header]', { yPercent: -100, duration: 0.9 })
+      .from('[data-header]', { yPercent: -100, duration: 0.9, clearProps: 'transform' })
       .from('[data-hero-eyebrow]', { opacity: 0, y: 18, duration: 0.65 }, '-=0.45')
       .from('.hero-title .word-inner', { yPercent: 110, duration: 1.1, stagger: 0.055 }, '-=0.45')
       .from('[data-hero-copy], [data-hero-actions], [data-hero-meta]', { opacity: 0, y: 20, duration: 0.8, stagger: 0.09 }, '-=0.65')

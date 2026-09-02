@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio de UX Lead y Product Design Lead especializado en experiencias digitales, ecommerce y sistemas de diseño.">
+  <meta name="description" content="Portfolio de UX Lead y Product Design Lead especializado en experiencias digitales, ecommerce y sistemas de diseño." data-i18n="meta.description" data-i18n-attr="content">
   <meta name="theme-color" content="#f4f3ef">
-  <title>Elmer Osorio — UX Lead & Product Design Lead</title>
+  <title data-i18n="meta.title">Elmer Osorio — UX Lead & Product Design Lead</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,23 +24,29 @@
   <script type="module" src="assets/js/app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
   <div class="page-transition" data-page-transition aria-hidden="true"></div>
   <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
   <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
 
   <header class="site-header" data-header>
-    <nav class="nav-shell container" aria-label="Navegación principal">
+    <nav class="nav-shell container" aria-label="Navegación principal" data-i18n="a11y.nav" data-i18n-attr="aria-label">
       <a class="brand" href="index.html" aria-label="Ir al inicio">
         <span class="brand-mark" aria-hidden="true"></span>
         <span>Elmer Osorio</span>
       </a>
       <ul class="nav-links">
-        <li><a class="nav-link" href="#about" data-section-link>Perfil</a></li>
-        <li><a class="nav-link" href="#projects" data-section-link>Proyectos</a></li>
-        <li><a class="nav-link" href="#contact" data-section-link>Contacto</a></li>
+        <li><a class="nav-link" href="#about" data-section-link data-i18n="nav.profile">Perfil</a></li>
+        <li><a class="nav-link" href="#projects" data-section-link data-i18n="nav.projects">Proyectos</a></li>
+        <li><a class="nav-link" href="#contact" data-section-link data-i18n="nav.contact">Contacto</a></li>
       </ul>
-      <a class="nav-cta" href="mailto:correo@ejemplo.com">Hablemos</a>
+      <div class="nav-end">
+        <div class="lang-toggle" role="group" aria-label="Seleccionar idioma" data-lang-toggle>
+          <button type="button" data-lang-btn="es">ES</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+        <a class="nav-cta" href="mailto:elmer.osorio.h@gmail.com" data-i18n="nav.cta">Hablemos</a>
+      </div>
     </nav>
   </header>
 
@@ -49,16 +55,16 @@
       <div class="hero-grid">
         <div class="hero-content">
           <p class="hero-eyebrow" data-hero-eyebrow>UX Lead · Product Design Lead · Frontend</p>
-          <h1 class="hero-title" id="hero-title" data-hero-title>Diseño productos digitales que conectan <em>personas y negocio.</em></h1>
-          <p class="hero-copy" data-hero-copy>Lidero experiencias digitales de principio a fin, combinando investigación, estrategia y diseño de producto útiles, escalables y medibles.</p>
+          <h1 class="hero-title" id="hero-title" data-hero-title data-i18n="hero.title">Diseño productos digitales que conectan <em>personas y negocio.</em></h1>
+          <p class="hero-copy" data-hero-copy data-i18n="hero.copy">Lidero experiencias digitales de principio a fin, combinando investigación, estrategia y diseño de producto útiles, escalables y medibles.</p>
           <div class="hero-actions" data-hero-actions>
-            <a class="button button--primary" href="#projects">Ver proyectos <span class="button__icon" aria-hidden="true">↘</span></a>
-            <a class="button button--secondary" href="mailto:elmer.osorio.h@gmail.com">Contactarme</a>
+            <a class="button button--primary" href="#projects" data-i18n="hero.ctaPrimary">Ver proyectos <span class="button__icon" aria-hidden="true">↘</span></a>
+            <a class="button button--secondary" href="mailto:elmer.osorio.h@gmail.com" data-i18n="hero.ctaSecondary">Contactarme</a>
           </div>
           <dl class="hero-meta" data-hero-meta>
-            <div><dt>Base</dt><dd>San Salvador · Remoto</dd></div>
-            <div><dt>Especialidad</dt><dd>Ecommerce & Product UX</dd></div>
-            <div><dt>Experiencia</dt><dd>+5 años</dd></div>
+            <div><dt data-i18n="hero.meta.baseLabel">Base</dt><dd data-i18n="hero.meta.baseValue">San Salvador · Remoto</dd></div>
+            <div><dt data-i18n="hero.meta.specialtyLabel">Especialidad</dt><dd>Ecommerce & Product UX</dd></div>
+            <div><dt data-i18n="hero.meta.expLabel">Experiencia</dt><dd data-i18n="hero.meta.expValue">+5 años</dd></div>
           </dl>
         </div>
 
@@ -75,16 +81,16 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
         <div class="about-sticky" data-reveal>
-          <p class="section-label">Perfil</p>
-          <h2 class="display-title" id="about-title">Estrategia, diseño y tecnología en una misma conversación.</h2>
+          <p class="section-label" data-i18n="about.label">Perfil</p>
+          <h2 class="display-title" id="about-title" data-i18n="about.title">Estrategia, diseño y tecnología en una misma conversación.</h2>
         </div>
         <div>
-          <p class="body-large muted" data-reveal>Trabajo en la intersección entre experiencia de usuario, producto, contenido y negocio. Mi enfoque traduce problemas complejos en decisiones claras y experiencias que los equipos pueden ejecutar y medir.</p>
+          <p class="body-large muted" data-reveal data-i18n="about.body">Trabajo en la intersección entre experiencia de usuario, producto, contenido y negocio. Mi enfoque traduce problemas complejos en decisiones claras y experiencias que los equipos pueden ejecutar y medir.</p>
           <ul class="capability-list" aria-label="Capacidades profesionales">
-            <li class="capability-item" data-reveal data-reveal-delay="0"><span class="capability-number">01</span><span class="capability-title">Product strategy & discovery</span><span class="capability-tag">Dirección</span></li>
-            <li class="capability-item" data-reveal data-reveal-delay="80"><span class="capability-number">02</span><span class="capability-title">UX research & service design</span><span class="capability-tag">Insights</span></li>
-            <li class="capability-item" data-reveal data-reveal-delay="160"><span class="capability-number">03</span><span class="capability-title">Interaction & visual design</span><span class="capability-tag">Experiencia</span></li>
-            <li class="capability-item" data-reveal data-reveal-delay="240"><span class="capability-number">04</span><span class="capability-title">Design systems & frontend</span><span class="capability-tag">Escala</span></li>
+            <li class="capability-item" data-reveal data-reveal-delay="0"><span class="capability-number">01</span><span class="capability-title" data-i18n="about.cap1.title">Product strategy & discovery</span><span class="capability-tag" data-i18n="about.cap1.tag">Dirección</span></li>
+            <li class="capability-item" data-reveal data-reveal-delay="80"><span class="capability-number">02</span><span class="capability-title" data-i18n="about.cap2.title">UX research & service design</span><span class="capability-tag" data-i18n="about.cap2.tag">Insights</span></li>
+            <li class="capability-item" data-reveal data-reveal-delay="160"><span class="capability-number">03</span><span class="capability-title" data-i18n="about.cap3.title">Interaction & visual design</span><span class="capability-tag" data-i18n="about.cap3.tag">Experiencia</span></li>
+            <li class="capability-item" data-reveal data-reveal-delay="240"><span class="capability-number">04</span><span class="capability-title" data-i18n="about.cap4.title">Design systems & frontend</span><span class="capability-tag" data-i18n="about.cap4.tag">Escala</span></li>
           </ul>
         </div>
       </div>
@@ -93,33 +99,33 @@
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <header class="projects-header">
-          <div data-reveal><p class="section-label">Trabajo seleccionado</p><h2 class="display-title" id="projects-title">Casos que combinan impacto y ejecución.</h2></div>
-          <p class="body-large muted" data-reveal>Reemplaza estos cuatro casos por proyectos reales. Cada tarjeta enlaza a una copia de la plantilla incluida.</p>
+          <div data-reveal><p class="section-label" data-i18n="projects.label">Trabajo seleccionado</p><h2 class="display-title" id="projects-title" data-i18n="projects.title">Casos que combinan impacto y ejecución.</h2></div>
+          <p class="body-large muted" data-reveal data-i18n="projects.body">Reemplaza estos cuatro casos por proyectos reales. Cada tarjeta enlaza a una copia de la plantilla incluida.</p>
         </header>
 
         <div class="projects-grid">
           <article class="project-card" data-project-card data-reveal>
             <a class="project-link" href="projects/home.html" data-cursor-label="Ver caso">
               <div class="project-media-wrap" data-tilt-surface><div class="placeholder-media project-media">Imagen proyecto 01<br>1600 × 1200</div><span class="project-overlay"></span></div>
-              <div class="project-content"><div><h3 class="project-title">Home</h3><p class="project-description">Reestructuración del home de un ecommerce: buscador inteligente, tiempos de carga y accesibilidad WCAG 2.2.</p></div><p class="project-meta">UX Designer<br>2024</p></div>
+              <div class="project-content"><div><h3 class="project-title" data-i18n="projects.card1.title">Home</h3><p class="project-description" data-i18n="projects.card1.desc">Reestructuración del home de un ecommerce: buscador inteligente, tiempos de carga y accesibilidad WCAG 2.2.</p></div><p class="project-meta" data-i18n="projects.card1.meta">UX Designer<br>2024</p></div>
             </a>
           </article>
           <article class="project-card" data-project-card data-reveal data-reveal-delay="100">
             <a class="project-link" href="projects/project-template.html" data-cursor-label="Ver caso">
               <div class="project-media-wrap" data-tilt-surface><div class="placeholder-media project-media">Imagen proyecto 02<br>1200 × 1500</div><span class="project-overlay"></span></div>
-              <div class="project-content"><div><h3 class="project-title">Proyecto financiero</h3><p class="project-description">Rediseño de una experiencia crítica con foco en claridad, confianza y conversión.</p></div><p class="project-meta">Product Design<br>2024</p></div>
+              <div class="project-content"><div><h3 class="project-title" data-i18n="projects.card2.title">Proyecto financiero</h3><p class="project-description" data-i18n="projects.card2.desc">Rediseño de una experiencia crítica con foco en claridad, confianza y conversión.</p></div><p class="project-meta" data-i18n="projects.card2.meta">Product Design<br>2024</p></div>
             </a>
           </article>
           <article class="project-card" data-project-card data-reveal>
             <a class="project-link" href="projects/project-template.html" data-cursor-label="Ver caso">
               <div class="project-media-wrap" data-tilt-surface><div class="placeholder-media project-media">Imagen proyecto 03<br>1200 × 1500</div><span class="project-overlay"></span></div>
-              <div class="project-content"><div><h3 class="project-title">Design system</h3><p class="project-description">Sistema modular para acelerar consistencia, colaboración y entrega entre equipos.</p></div><p class="project-meta">Design Systems<br>2024</p></div>
+              <div class="project-content"><div><h3 class="project-title" data-i18n="projects.card3.title">Design system</h3><p class="project-description" data-i18n="projects.card3.desc">Sistema modular para acelerar consistencia, colaboración y entrega entre equipos.</p></div><p class="project-meta" data-i18n="projects.card3.meta">Design Systems<br>2024</p></div>
             </a>
           </article>
           <article class="project-card" data-project-card data-reveal data-reveal-delay="100">
             <a class="project-link" href="projects/project-template.html" data-cursor-label="Ver caso">
               <div class="project-media-wrap" data-tilt-surface><div class="placeholder-media project-media">Imagen proyecto 04<br>1600 × 1200</div><span class="project-overlay"></span></div>
-              <div class="project-content"><div><h3 class="project-title">Producto digital</h3><p class="project-description">Diseño end-to-end desde la investigación hasta la validación con usuarios.</p></div><p class="project-meta">UX / UI<br>2023</p></div>
+              <div class="project-content"><div><h3 class="project-title" data-i18n="projects.card4.title">Producto digital</h3><p class="project-description" data-i18n="projects.card4.desc">Diseño end-to-end desde la investigación hasta la validación con usuarios.</p></div><p class="project-meta" data-i18n="projects.card4.meta">UX / UI<br>2023</p></div>
             </a>
           </article>
         </div>
@@ -128,20 +134,21 @@
 
     <section class="section section--tight" aria-label="Resultados destacados">
       <div class="container metrics" data-reveal>
-        <div class="metric"><strong class="metric-value">+30%</strong><span class="metric-label">Ejemplo de mejora en conversión o indicador principal.</span></div>
-        <div class="metric"><strong class="metric-value">4</strong><span class="metric-label">Mercados, equipos o productos impactados.</span></div>
-        <div class="metric"><strong class="metric-value">XX</strong><span class="metric-label">Métrica adicional que demuestre escala o impacto.</span></div>
+        <div class="metric"><strong class="metric-value">+30%</strong><span class="metric-label" data-i18n="metrics.label1">Ejemplo de mejora en conversión o indicador principal.</span></div>
+        <div class="metric"><strong class="metric-value">4</strong><span class="metric-label" data-i18n="metrics.label2">Mercados, equipos o productos impactados.</span></div>
+        <div class="metric"><strong class="metric-value">XX</strong><span class="metric-label" data-i18n="metrics.label3">Métrica adicional que demuestre escala o impacto.</span></div>
       </div>
     </section>
 
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="contact-panel" data-reveal="scale">
-          <div><p class="section-label">Contacto</p><h2 class="contact-title" id="contact-title">Construyamos algo que merezca ser usado.</h2></div>
+          <div><p class="section-label" data-i18n="contact.label">Contacto</p><h2 class="contact-title" id="contact-title" data-i18n="contact.title">Construyamos algo que merezca ser usado.</h2></div>
           <div class="contact-links">
-            <a class="contact-link" href="mailto:correo@ejemplo.com"><span>correo@ejemplo.com</span><span aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="mailto:elmer.osorio.h@gmail.com"><span>elmer.osorio.h@gmail.com</span><span aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="tel:+50370667970"><span>+503 7066 7970</span><span aria-hidden="true">↗</span></a>
             <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
-            <a class="contact-link" href="#"><span>Descargar CV</span><span aria-hidden="true">↓</span></a>
+            <a class="contact-link" href="#"><span data-i18n="contact.cv">Descargar CV</span><span aria-hidden="true">↓</span></a>
           </div>
         </div>
       </div>
@@ -149,7 +156,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-row"><span>© <span data-current-year></span> Elmer Osorio</span><span>Diseñado con intención. Construido con detalle.</span></div>
+    <div class="container footer-row"><span>© <span data-current-year></span> Elmer Osorio</span><span data-i18n="footer.tagline">Diseñado con intención. Construido con detalle.</span></div>
   </footer>
 </body>
 </html>

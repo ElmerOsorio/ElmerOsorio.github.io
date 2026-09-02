@@ -6,11 +6,13 @@ import { initCursor } from './cursor.js';
 import { initPortfolio } from './portfolio.js';
 import { initParallax } from './parallax.js';
 import { initTransitions } from './transitions.js';
+import { initI18n } from './i18n.js';
 
 /** Application bootstrap. Every module is defensive and page-aware. */
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
+  initI18n();
   initSmoothScroll();
   initNavbar();
   initReveals();

@@ -15,17 +15,25 @@ Base limpia y autónoma para reconstruir el portfolio sin depender de `combined.
 Los bloques grises usan `.placeholder-media`. Sustitúyelos por imágenes reales:
 
 ```html
-<img class="project-media" src="assets/images/proyecto.webp" width="1600" height="1200" alt="Descripción útil de la interfaz">
+<img class="project-media" src="assets/images/<slug-del-proyecto>/proyecto.webp" width="1600" height="1200" alt="Descripción útil de la interfaz">
 ```
 
 En el hero, conserva las clases `hero-layer hero-layer--main` y sustituye únicamente su contenido.
 
+Cada proyecto tiene su propia carpeta de imágenes en `assets/images/<slug>/` (mismo slug que su archivo HTML), para no mezclar assets de distintos casos en una sola carpeta plana. Ya existen las carpetas de los 4 proyectos del roster actual:
+
+- `assets/images/home/`
+- `assets/images/pdp-checkout/`
+- `assets/images/getbeautyfull/`
+- `assets/images/super-app-siman/`
+
 ## Crear un proyecto
 
 1. Duplica `projects/project-template.html`.
-2. Renómbralo, por ejemplo `projects/siman.html`.
-3. Cambia textos, metadata e imágenes.
-4. Actualiza el enlace correspondiente en `index.html`.
+2. Renómbralo con el slug del proyecto, por ejemplo `projects/siman.html`.
+3. Crea su carpeta de imágenes: `assets/images/siman/`.
+4. Cambia textos, metadata e imágenes.
+5. Actualiza el enlace correspondiente en `index.html` (y el link "Siguiente proyecto" del caso anterior, si aplica).
 
 ## Orden de estilos
 

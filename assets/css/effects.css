@@ -89,7 +89,7 @@ button { color: inherit; }
 .site-header.is-hidden { transform: translate3d(0, -105%, 0); }
 .nav-shell { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 1.75rem; width: auto; transition: opacity var(--duration-fast); }
+.brand-logo { height: 2.25rem; width: auto; transition: opacity var(--duration-fast); }
 .brand:hover .brand-logo { opacity: 0.72; }
 .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.25rem); margin: 0; padding: 0; list-style: none; }
 .nav-link { position: relative; padding-block: 0.7rem; font-size: var(--step--1); font-weight: 600; }
@@ -142,8 +142,8 @@ button { color: inherit; }
 .hero-layer img { width: 100%; height: 100%; object-fit: cover; }
 .hero-layer--back { inset: 0 12% 10% 2%; background: var(--color-surface); border: 1px solid var(--color-line); transform: rotate(-3deg); }
 .hero-layer--main { inset: 8% 0 0 14%; background: #c5c5c0; box-shadow: var(--shadow-card); }
-.hero-layer--detail { right: -2%; bottom: 4%; width: 34%; aspect-ratio: 1; background: var(--color-surface); border: 1px solid var(--color-line); color: var(--color-accent); }
-.hero-layer--detail-icon { position: absolute; inset: 26%; }
+.hero-layer--detail { right: -2%; bottom: 4%; width: 34%; aspect-ratio: 1; background: var(--color-surface); border: 1px solid var(--color-line); color: var(--color-text); }
+.hero-layer--detail-icon { position: absolute; top: 25%; right: 26%; bottom: 27%; left: 26%; }
 .placeholder-media { display: grid; width: 100%; height: 100%; min-height: 12rem; place-items: center; color: #5f5f5b; background: linear-gradient(135deg, #d8d8d3, #bdbdb8); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-align: center; text-transform: uppercase; }
 .hero-scroll { position: absolute; right: var(--gutter); bottom: var(--space-4); display: flex; align-items: center; gap: 0.75rem; font-size: var(--step--1); font-weight: 600; writing-mode: vertical-rl; }
 .hero-scroll::after { width: 1px; height: 4rem; content: ""; background: var(--color-line); }

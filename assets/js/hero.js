@@ -27,6 +27,15 @@ export function initHero() {
       .from('.hero-title .word-inner', { yPercent: 110, duration: 1.1, stagger: 0.055 }, '-=0.45')
       .from('[data-hero-copy], [data-hero-actions], [data-hero-meta]', { opacity: 0, y: 20, duration: 0.8, stagger: 0.09 }, '-=0.65')
       .from(layers, { opacity: 0, scale: 0.92, rotate: 2, duration: 1.25, stagger: 0.1 }, '-=1');
+
+    // Safety net: the hero photo and copy must never depend solely on this
+    // animation to become visible. If a backgrounded tab, a slow network
+    // fetch for the GSAP/Lenis scripts, or any other stall keeps the
+    // timeline from finishing on its own, snap it to its end state instead
+    // of leaving the hero stuck invisible.
+    window.setTimeout(() => {
+      if (timeline.progress() < 1) timeline.progress(1);
+    }, 4000);
   }
 
   if (!isFinePointer()) return;

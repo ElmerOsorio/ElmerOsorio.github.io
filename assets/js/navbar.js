@@ -5,15 +5,27 @@ export function initNavbar() {
   const header = qs('[data-header]');
   if (!header) return;
 
+  const HIDE_TOLERANCE = 6; // px of consistent movement before flipping direction, absorbs scroll jitter
   let lastY = window.scrollY;
   let suppressHide = false;
   const updateHeader = rafThrottle(() => {
     const currentY = window.scrollY;
     header.classList.toggle('is-scrolled', currentY > 24);
-    if (!suppressHide) {
-      header.classList.toggle('is-hidden', currentY > lastY && currentY > 180);
+
+    if (suppressHide) {
+      lastY = currentY;
+      return;
     }
-    lastY = currentY;
+    if (currentY <= 180) {
+      header.classList.remove('is-hidden');
+      lastY = currentY;
+      return;
+    }
+    const delta = currentY - lastY;
+    if (Math.abs(delta) > HIDE_TOLERANCE) {
+      header.classList.toggle('is-hidden', delta > 0);
+      lastY = currentY;
+    }
   });
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();

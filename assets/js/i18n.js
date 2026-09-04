@@ -97,7 +97,7 @@ const DICTIONARY = {
     'metrics.label3': 'Additional metric that shows scale or impact.',
     'contact.label': 'Contact',
     'contact.title': "Let's build something worth using.",
-    'contact.cv': 'Download CV',
+    'contact.cv': 'Download Resume',
     'footer.tagline': 'Designed with intention. Built with detail.',
   },
 };

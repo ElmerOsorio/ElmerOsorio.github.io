@@ -36,17 +36,12 @@ html.js [data-reveal].is-visible { opacity: 1; filter: blur(0); transform: trans
 
 @keyframes heroGlowDrift {
   0% { transform: translate(0, 0) rotate(0deg) scale(1); }
-  50% { transform: translate(-6%, 5%) rotate(-6deg) scale(1.15); }
-  100% { transform: translate(4%, -4%) rotate(4deg) scale(1.05); }
+  33% { transform: translate(-6%, 5%) rotate(-6deg) scale(1.15); }
+  66% { transform: translate(7%, -6%) rotate(6deg) scale(1.2); }
+  100% { transform: translate(-3%, -3%) rotate(-3deg) scale(1.05); }
 }
-@keyframes heroGlowDriftReverse {
-  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
-  50% { transform: translate(7%, -6%) rotate(8deg) scale(1.2); }
-  100% { transform: translate(-5%, 4%) rotate(-5deg) scale(1.05); }
-}
-.hero::before { animation: heroGlowDrift 26s var(--ease-in-out) infinite alternate; }
-.hero::after { animation: heroGlowDriftReverse 32s var(--ease-in-out) infinite alternate; }
+.hero::before { animation: heroGlowDrift 30s var(--ease-in-out) infinite alternate; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero::before, .hero::after { animation: none; }
+  .hero::before { animation: none; }
 }

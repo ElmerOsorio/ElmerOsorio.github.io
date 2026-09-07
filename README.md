@@ -35,6 +35,15 @@ Cada proyecto tiene su propia carpeta de imágenes en `assets/images/<slug>/` (m
 4. Cambia textos, metadata e imágenes.
 5. Actualiza el enlace correspondiente en `index.html` (y el link "Siguiente proyecto" del caso anterior, si aplica).
 
+## Crear una entrada de blog
+
+El blog vive en `blog/` y, a diferencia de los casos de proyecto, sí es bilingüe (ES/EN) como el resto del sitio.
+
+1. Duplica `blog/post-template.html` y renómbralo con el slug del post, por ejemplo `blog/design-systems-101.html`.
+2. Actualiza `<title>`, `meta description`, `canonical` y las etiquetas `og:*`/`twitter:*` con la URL y datos reales del post.
+3. Cada bloque de contenido bilingüe usa dos elementos hermanos con `data-lang-content="es"` y `data-lang-content="en" hidden` (el segundo arranca oculto; `assets/js/i18n.js` alterna cuál se muestra según el idioma activo). Sustituye el texto de ejemplo dentro de cada uno, no borres el atributo `data-lang-content`.
+4. Cuando el post esté listo, agrégalo a `blog/index.html`: reemplaza (o complementa) el bloque `.blog-empty` con un `.projects-grid` de tarjetas `.project-card`, igual al patrón que ya usa `index.html` para los proyectos.
+
 ## Orden de estilos
 
 No cambies el orden salvo que exista una razón documentada:

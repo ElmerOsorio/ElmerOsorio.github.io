@@ -184,6 +184,11 @@ button { color: inherit; }
 .project-description { max-width: 42ch; margin: 0.55rem 0 0; color: var(--color-text-muted); }
 .project-meta { margin: 0; color: var(--color-text-muted); font-size: var(--step--1); text-align: right; }
 
+.blog-empty { padding: var(--space-7) 0; border-top: 1px solid var(--color-line); }
+.blog-empty-title { max-width: 24ch; margin: 0; font-family: var(--font-display); font-size: var(--step-3); font-weight: 400; }
+.blog-empty-body { max-width: 42ch; margin: var(--space-3) 0 0; color: var(--color-text-muted); font-size: var(--step-1); }
+.blog-empty-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: var(--space-4); font-weight: 700; }
+
 .metrics { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
 .metric { padding: var(--space-5); border-right: 1px solid var(--color-line); }
 .metric:last-child { border-right: 0; }

@@ -9,6 +9,7 @@ const DICTIONARY = {
     'a11y.nav': 'Navegación principal',
     'nav.profile': 'Perfil',
     'nav.projects': 'Proyectos',
+    'nav.blog': 'Blog',
     'nav.contact': 'Contacto',
     'hero.title': 'Diseño productos digitales que conectan <em>personas y negocio.</em>',
     'hero.copy': 'Lidero experiencias digitales de principio a fin, combinando investigación, estrategia y diseño de producto útiles, escalables y medibles.',
@@ -49,6 +50,12 @@ const DICTIONARY = {
     'contact.label': 'Contacto',
     'contact.title': 'Construyamos algo que merezca ser usado.',
     'contact.cv': 'Descargar CV',
+    'blog.kicker': 'Blog',
+    'blog.title': 'Ideas, procesos y aprendizajes de diseño.',
+    'blog.summary': 'Notas sobre producto, UX y el oficio de diseñar: decisiones, herramientas y lo que voy aprendiendo en el camino.',
+    'blog.empty.title': 'Primeras entradas en camino',
+    'blog.empty.body': 'Estoy preparando el contenido. Vuelve pronto o sígueme en LinkedIn para no perderte las próximas publicaciones.',
+    'blog.backHome': 'Volver al inicio',
     'footer.tagline': 'Diseñado con intención. Construido con detalle.',
   },
   en: {
@@ -58,6 +65,7 @@ const DICTIONARY = {
     'a11y.nav': 'Main navigation',
     'nav.profile': 'Profile',
     'nav.projects': 'Projects',
+    'nav.blog': 'Blog',
     'nav.contact': 'Contact',
     'hero.title': 'I design digital products that connect <em>people and business.</em>',
     'hero.copy': 'I lead end-to-end digital experiences, combining research, strategy and product design that are useful, scalable and measurable.',
@@ -98,6 +106,12 @@ const DICTIONARY = {
     'contact.label': 'Contact',
     'contact.title': "Let's build something worth using.",
     'contact.cv': 'Download Resume',
+    'blog.kicker': 'Blog',
+    'blog.title': 'Ideas, process, and design learnings.',
+    'blog.summary': "Notes on product, UX, and the craft of design: decisions, tools, and what I'm learning along the way.",
+    'blog.empty.title': 'First posts on the way',
+    'blog.empty.body': "Content is in the works. Check back soon, or follow me on LinkedIn so you don't miss the next posts.",
+    'blog.backHome': 'Back to home',
     'footer.tagline': 'Designed with intention. Built with detail.',
   },
 };
@@ -129,6 +143,10 @@ export function initI18n() {
       const isActive = btn.getAttribute('data-lang-btn') === lang;
       btn.classList.toggle('is-active', isActive);
       btn.setAttribute('aria-pressed', String(isActive));
+    });
+
+    document.querySelectorAll('[data-lang-content]').forEach((node) => {
+      node.hidden = node.getAttribute('data-lang-content') !== lang;
     });
 
     try { localStorage.setItem(STORAGE_KEY, lang); } catch { /* private mode / blocked storage */ }

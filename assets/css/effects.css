@@ -123,14 +123,13 @@ button { color: inherit; }
 .hero::before {
   content: "";
   position: absolute;
-  inset: -25%;
+  inset: -10%;
   background:
     radial-gradient(42% 38% at 96% 58%, color-mix(in srgb, #22d3ee 45%, transparent), transparent 72%),
     radial-gradient(48% 42% at 82% 12%, color-mix(in srgb, var(--color-accent) 55%, transparent), transparent 70%),
     radial-gradient(40% 38% at 60% 88%, color-mix(in srgb, var(--color-accent) 30%, transparent), transparent 72%);
   background-blend-mode: screen;
   filter: blur(60px);
-  will-change: transform;
   pointer-events: none;
   z-index: 0;
 }

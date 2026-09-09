@@ -13,6 +13,7 @@
     --color-line: rgba(255, 255, 255, 0.16);
     --color-accent: #87a2ff;
     --color-accent-contrast: #101010;
+    --color-success: #5fd9a4;
     --color-focus: #9ab0ff;
   }
 }
@@ -26,5 +27,6 @@
   --color-line: rgba(255, 255, 255, 0.16);
   --color-accent: #87a2ff;
   --color-accent-contrast: #101010;
+  --color-success: #5fd9a4;
   --color-focus: #9ab0ff;
 }

@@ -192,7 +192,7 @@ button { color: inherit; }
 .metrics { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
 .metric { padding: var(--space-5); border-right: 1px solid var(--color-line); }
 .metric:last-child { border-right: 0; }
-.metric-value { display: block; font-family: var(--font-display); font-size: var(--step-4); line-height: 1; }
+.metric-value { display: block; color: var(--color-success); font-family: var(--font-display); font-size: var(--step-4); line-height: 1; }
 .metric-label { display: block; max-width: 24ch; margin-top: 0.7rem; color: var(--color-text-muted); }
 
 .contact-panel { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(2rem, 8vw, 8rem); padding: clamp(2rem, 6vw, 6rem); color: #fff; background: #111; border-radius: var(--radius-lg); }

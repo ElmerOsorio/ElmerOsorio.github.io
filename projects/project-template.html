@@ -2,6 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (error) { /* localStorage unavailable: CSS media query still applies a sensible default */ }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Caso de estudio de producto digital.">
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
@@ -23,6 +32,7 @@
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <div class="page-transition" data-page-transition aria-hidden="true"></div>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
   <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
 
@@ -57,6 +67,24 @@
           <button type="button" data-lang-btn="es">ES</button>
           <button type="button" data-lang-btn="en">EN</button>
         </div>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro" data-theme-toggle data-magnetic>
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <g>
+              <line x1="12" y1="1.8" x2="12" y2="4.6"></line>
+              <line x1="12" y1="19.4" x2="12" y2="22.2"></line>
+              <line x1="1.8" y1="12" x2="4.6" y2="12"></line>
+              <line x1="19.4" y1="12" x2="22.2" y2="12"></line>
+              <line x1="4.5" y1="4.5" x2="6.5" y2="6.5"></line>
+              <line x1="17.5" y1="17.5" x2="19.5" y2="19.5"></line>
+              <line x1="4.5" y1="19.5" x2="6.5" y2="17.5"></line>
+              <line x1="17.5" y1="6.5" x2="19.5" y2="4.5"></line>
+            </g>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.6 15.1A8.7 8.7 0 1 1 8.9 3.4a7 7 0 0 0 11.7 11.7Z"></path>
+          </svg>
+        </button>
       </div>
     </nav>
   </header>

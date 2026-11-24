@@ -2,6 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (error) { /* localStorage unavailable: CSS media query still applies a sensible default */ }
+    })();
+  </script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -48,6 +57,7 @@
 <body>
   <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
   <div class="page-transition" data-page-transition aria-hidden="true"></div>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
   <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
 
@@ -82,6 +92,24 @@
           <button type="button" data-lang-btn="es">ES</button>
           <button type="button" data-lang-btn="en">EN</button>
         </div>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro" data-theme-toggle data-magnetic>
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <g>
+              <line x1="12" y1="1.8" x2="12" y2="4.6"></line>
+              <line x1="12" y1="19.4" x2="12" y2="22.2"></line>
+              <line x1="1.8" y1="12" x2="4.6" y2="12"></line>
+              <line x1="19.4" y1="12" x2="22.2" y2="12"></line>
+              <line x1="4.5" y1="4.5" x2="6.5" y2="6.5"></line>
+              <line x1="17.5" y1="17.5" x2="19.5" y2="19.5"></line>
+              <line x1="4.5" y1="19.5" x2="6.5" y2="17.5"></line>
+              <line x1="17.5" y1="6.5" x2="19.5" y2="4.5"></line>
+            </g>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.6 15.1A8.7 8.7 0 1 1 8.9 3.4a7 7 0 0 0 11.7 11.7Z"></path>
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
@@ -94,8 +122,8 @@
           <h1 class="hero-title" id="hero-title" data-hero-title data-i18n="hero.title">Diseño productos digitales que conectan <em>personas y negocio.</em></h1>
           <p class="hero-copy" data-hero-copy data-i18n="hero.copy">Lidero experiencias digitales de principio a fin, combinando investigación, estrategia y diseño de producto útiles, escalables y medibles.</p>
           <div class="hero-actions" data-hero-actions>
-            <a class="button button--primary" href="#projects" data-i18n="hero.ctaPrimary">Ver proyectos <span class="button__icon" aria-hidden="true">↘</span></a>
-            <a class="button button--secondary" href="#contact" data-i18n="hero.ctaSecondary">Contactarme</a>
+            <a class="button button--primary" href="#projects" data-i18n="hero.ctaPrimary" data-magnetic>Ver proyectos <span class="button__icon" aria-hidden="true">↘</span></a>
+            <a class="button button--secondary" href="#contact" data-i18n="hero.ctaSecondary" data-magnetic>Contactarme</a>
           </div>
           <dl class="hero-meta" data-hero-meta>
             <div><dt data-i18n="hero.meta.baseLabel">Base</dt><dd data-i18n="hero.meta.baseValue">San Salvador · Remoto</dd></div>
@@ -162,6 +190,12 @@
             <a class="project-link" href="projects/getbeautyfull.html" data-cursor-label="Ver caso">
               <div class="project-media-wrap" data-tilt-surface><div class="project-media-placeholder" data-i18n="projects.placeholder">En construcción</div><span class="project-overlay"></span></div>
               <div class="project-content"><div><h3 class="project-title" data-i18n="projects.card3.title">Getbeautyfull App</h3><p class="project-description" data-i18n="projects.card3.desc">Caso en preparación — pronto el detalle completo.</p></div><p class="project-meta" data-i18n="projects.card3.meta">Próximamente</p></div>
+            </a>
+          </article>
+          <article class="project-card" data-project-card data-reveal data-reveal-delay="100">
+            <a class="project-link" href="projects/analitica-dashboard.html" data-cursor-label="Ver caso">
+              <div class="project-media-wrap" data-tilt-surface><div class="project-media-placeholder" data-i18n="projects.card4.cover">Vista general del panel</div><span class="project-overlay"></span></div>
+              <div class="project-content"><div><h3 class="project-title" data-i18n="projects.card4.title">Panel de analítica unificada</h3><p class="project-description" data-i18n="projects.card4.desc">Diseño de un panel interno que cruza ventas, comportamiento y búsqueda en una sola vista, con lectura distinta según el rol de quien la usa.</p></div><p class="project-meta" data-i18n="projects.card4.meta">UX Lead<br>2025–2026</p></div>
             </a>
           </article>
         </div>

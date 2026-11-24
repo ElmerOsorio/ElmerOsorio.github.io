@@ -34,3 +34,20 @@ html.js [data-reveal].is-visible { opacity: 1; filter: blur(0); transform: trans
 }
 .hero-scroll::after { animation: scrollPulse 2s var(--ease-in-out) infinite; }
 
+/* Placeholder media shimmer: a light sweep signals "media pending" until real images land. */
+.placeholder-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.4) 50%, transparent 80%);
+  transform: translateX(-100%);
+  animation: shimmerSweep 2.8s var(--ease-in-out) infinite;
+}
+@keyframes shimmerSweep {
+  0% { transform: translateX(-100%); }
+  55%, 100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .placeholder-media::after { animation: none; }
+}
+

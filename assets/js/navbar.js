@@ -1,8 +1,9 @@
-import { qs, qsa, rafThrottle } from './utils.js';
+import { qs, qsa, rafThrottle, clamp } from './utils.js';
 
 /** Handles sticky styling, directional visibility and active section. */
 export function initNavbar() {
   const header = qs('[data-header]');
+  const progress = qs('[data-scroll-progress]');
   if (!header) return;
 
   const HIDE_TOLERANCE = 6; // px of consistent movement before flipping direction, absorbs scroll jitter
@@ -11,6 +12,12 @@ export function initNavbar() {
   const updateHeader = rafThrottle(() => {
     const currentY = window.scrollY;
     header.classList.toggle('is-scrolled', currentY > 24);
+
+    if (progress) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? clamp(0, currentY / max, 1) : 0;
+      progress.style.transform = `scaleX(${ratio})`;
+    }
 
     if (suppressHide) {
       lastY = currentY;
@@ -28,6 +35,7 @@ export function initNavbar() {
     }
   });
   window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('resize', updateHeader);
   updateHeader();
 
   // A nav-link click triggers an animated scroll (smooth-scroll.js); ignore

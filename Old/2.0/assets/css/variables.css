@@ -1,0 +1,64 @@
+/* ========================================================================== 
+   DESIGN TOKENS
+   Edit this file first when adapting the visual identity.
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  --color-bg: #f4f3ef;
+  --color-surface: #ffffff;
+  --color-surface-alt: #e9e8e3;
+  --color-text: #111111;
+  --color-text-muted: #686862;
+  --color-line: rgba(17, 17, 17, 0.14);
+  --color-accent: #2457ff;
+  --color-accent-contrast: #ffffff;
+  --color-success: #147a4b;
+  --color-focus: #2457ff;
+
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.12vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.12rem);
+  --step-1: clamp(1.2rem, 1.09rem + 0.45vw, 1.5rem);
+  --step-2: clamp(1.44rem, 1.24rem + 0.84vw, 2rem);
+  --step-3: clamp(1.73rem, 1.38rem + 1.45vw, 2.66rem);
+  --step-4: clamp(2.07rem, 1.5rem + 2.38vw, 3.55rem);
+  --step-5: clamp(2.49rem, 1.59rem + 3.75vw, 4.74rem);
+  --step-6: clamp(2.99rem, 1.61rem + 5.72vw, 6.32rem);
+
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 7rem;
+  --space-9: 10rem;
+
+  --container: 90rem;
+  --container-narrow: 68rem;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --header-height: 5.25rem;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 1.5rem 4rem rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2rem 5rem rgba(0, 0, 0, 0.13);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 180ms;
+  --duration-medium: 500ms;
+  --duration-slow: 900ms;
+
+  --z-base: 1;
+  --z-nav: 80;
+  --z-overlay: 90;
+  --z-cursor: 100;
+}

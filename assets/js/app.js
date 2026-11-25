@@ -12,9 +12,11 @@ import { initTheme } from './theme.js';
 import { initMagnetic } from './magnetic.js';
 import { initCounters } from './counters.js';
 import { initPrivacyNotice } from './privacy-notice.js';
+import { initAnalytics } from './analytics.js';
 
 /** Application bootstrap. Every module is defensive and page-aware. */
 document.documentElement.classList.add('js');
+initAnalytics();
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();

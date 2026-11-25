@@ -5,7 +5,14 @@
   :root { --header-height: 4.75rem; }
   .hero-grid, .project-hero-grid, .contact-panel { grid-template-columns: minmax(0, 1fr); }
   .hero { min-height: auto; padding-top: calc(var(--header-height) + (var(--space-7) / 2)); }
-  .hero-visual { min-height: 34rem; }
+  /* Portrait becomes a byline avatar beside the eyebrow so the CTAs stay in the first screen */
+  .hero-grid { grid-template-columns: auto minmax(0, 1fr); column-gap: var(--space-3); row-gap: 0; }
+  .hero-content { display: contents; }
+  .hero-visual { grid-column: 1; grid-row: 1; justify-content: flex-start; padding-right: 0; }
+  .hero-layer--main { width: 4.5rem; border-radius: var(--radius-sm); }
+  .hero-eyebrow { grid-column: 2; grid-row: 1; margin: 0; }
+  .hero-title, .hero-copy, .hero-actions, .hero-meta { grid-column: 1 / -1; }
+  .hero-title { margin-top: var(--space-4); }
   .about-grid { grid-template-columns: 1fr; }
   .about-sticky, .case-heading { position: static; }
   .project-card, .project-card:nth-child(n) { grid-column: span 12; }
@@ -20,14 +27,14 @@
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-link { flex: none; padding-block: 0.7rem; font-size: var(--step--1); font-weight: 600; white-space: nowrap; }
   .display-title, .contact-title { max-width: 100%; }
-  .hero { padding-inline: var(--gutter); }
+  .hero { padding-inline: var(--gutter); padding-top: calc(var(--header-height) + var(--space-2)); }
+  .hero-layer--main { width: 4rem; }
+  .hero-title { line-height: 1.1; }
+  .hero-copy { font-size: var(--step-0); }
+  .hero-actions { margin-top: var(--space-4); }
   .hero-actions { gap: 0.5rem; }
   .hero-actions .button { flex: 1 1 0; min-width: 0; padding-inline: 0.9rem; font-size: var(--step--1); }
   .hero-actions .button--primary { flex-grow: 1.3; }
-  .hero-grid { grid-template-columns: minmax(0, 1fr); }
-  .hero-visual { min-height: 27rem; margin-top: var(--space-4); }
-  .hero-layer--back { inset: 0 15% 10% 0; }
-  .hero-layer--main { inset: 6% 0 0 10%; }
   .hero-scroll { display: none; }
   .projects-header { display: block; }
   .projects-header .body-large { margin-top: var(--space-4); }

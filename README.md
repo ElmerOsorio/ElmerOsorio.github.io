@@ -25,7 +25,7 @@ Cada proyecto tiene su propia carpeta de imágenes en `assets/images/<slug>/` (m
 - `assets/images/home/`
 - `assets/images/pdp-checkout/`
 - `assets/images/getbeautyfull/`
-- `assets/images/super-app-siman/`
+- `assets/images/analitica-dashboard/`
 
 ## Crear un proyecto
 

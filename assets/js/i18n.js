@@ -60,6 +60,11 @@ const DICTIONARY = {
     'blog.empty.body': 'Estoy preparando el contenido. Vuelve pronto o sígueme en LinkedIn para no perderte las próximas publicaciones.',
     'blog.backHome': 'Volver al inicio',
     'footer.tagline': 'Diseñado con intención, construido con cuidado.',
+    'footer.privacy': 'Privacidad',
+    'privacy.label': 'Aviso de privacidad',
+    'privacy.notice': 'Este sitio usa Microsoft Clarity y cookies para entender cómo se navega.',
+    'privacy.more': 'Más información',
+    'privacy.ok': 'Entendido',
   },
   en: {
     'meta.title': 'Elmer Osorio — UX Lead & Product Design Lead',
@@ -119,6 +124,11 @@ const DICTIONARY = {
     'blog.empty.body': "Content is in the works. Check back soon, or follow me on LinkedIn so you don't miss the next posts.",
     'blog.backHome': 'Back to home',
     'footer.tagline': 'Designed with intention. Built with detail.',
+    'footer.privacy': 'Privacy',
+    'privacy.label': 'Privacy notice',
+    'privacy.notice': 'This site uses Microsoft Clarity and cookies to understand how people browse it.',
+    'privacy.more': 'Learn more',
+    'privacy.ok': 'Got it',
   },
 };
 
